@@ -67,6 +67,8 @@ const handlePizzaSubmit = event => {
   })
   .catch(err => {
     console.log(err);
+    // instead of the app just failing, the pizza data will be stored in the new_pizza object store
+    saveRecord(formData);
   });
 };
 
